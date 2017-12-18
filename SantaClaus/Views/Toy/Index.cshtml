@@ -1,0 +1,26 @@
+﻿using SantaClaus.Models;
+
+@{
+    ViewBag.Title = "Toys";
+}
+@model Toy
+<div class="row">
+    <div class="col-xs-8">
+        <h2 style="text-align:center;">Toys</h2>
+    </div>
+</div>
+@foreach (var toy in Model.EntityList)
+{
+    <hr />
+    <div class="row">
+        <div class="col-xs-8">
+            <h4>@toy.ToyName</h4>
+        </div>
+        <div class="col-xs-2">
+            @toy.Amount
+        </div>
+        <div class="col-xs-2">
+            @toy.Cost
+        </div>
+    </div>
+}
